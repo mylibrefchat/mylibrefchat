@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Lib RefChat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+    header .logo {
+      max-width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #0073e6;
+    }
+    header p {
+      margin: 5px 0 0 0;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .lang-switch {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    section {
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      border-bottom: 2px solid #0073e6;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      color: #0073e6;
+    }
+    .faq-item {
+      margin-bottom: 15px;
+    }
+    .faq-item strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #004a99;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+    .en { display: none; }
+
+    @media (max-width: 600px) {
+      body { padding: 10px; }
+      header .logo { max-width: 80px; }
+      header h1 { font-size: 1.8rem; }
+      header p { font-size: 1rem; }
+      section { padding: 15px; margin-bottom: 20px; }
+      section h2 { font-size: 1.3rem; border-bottom-width: 1.5px; }
+      .faq-item strong { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/L8lDmSw.png" alt="My Lib RefChat Logo" class="logo" />
+    <h1>My Lib RefChat</h1>
+    <p id="subtitle">Rujukan Pintar Perpustakaan Anda</p>
+  </header>
+
+  <div class="lang-switch">
+    <button onclick="setLanguage('ms')">Bahasa Melayu</button>
+    <button onclick="setLanguage('en')">English</button>
+  </div>
+
+  <section class="ms">
+    <h2>Selamat Datang</h2>
+    <p>Selamat datang ke portal My Lib RefChat. Kami sedia membantu anda menjawab pertanyaan berkaitan perkhidmatan perpustakaan 24/7 melalui chat di bawah.</p>
+  </section>
+  <section class="en">
+    <h2>Welcome</h2>
+    <p>Welcome to the My Lib RefChat portal. We are ready to assist you with library-related inquiries 24/7 through the chat below.</p>
+  </section>
+
+  <section class="ms">
+    <h2>Soalan Lazim (FAQ)</h2>
+    <div class="faq-item">
+      <strong>Apakah perkhidmatan yang disediakan?</strong>
+      Kami menawarkan bantuan rujukan, pinjaman bahan, akses ke pangkalan data langganan, dan latihan literasi maklumat.
+    </div>
+    <div class="faq-item">
+      <strong>Bila waktu operasi?</strong>
+      Perkhidmatan chat kami beroperasi 24 jam setiap hari melalui sistem Tawk.to.
+    </div>
+    <div class="faq-item">
+      <strong>Bagaimana mengakses e-resources?</strong>
+      Anda boleh log masuk ke laman e-resources melalui akaun pelajar atau staf anda. Hubungi kami jika memerlukan panduan.
+    </div>
+  </section>
+
+  <section class="en">
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <div class="faq-item">
+      <strong>What services are provided?</strong>
+      We offer reference assistance, book lending, access to subscription databases, and information literacy training.
+    </div>
+    <div class="faq-item">
+      <strong>What are your operating hours?</strong>
+      Our chat service is available 24/7 via the Tawk.to system.
+    </div>
+    <div class="faq-item">
+      <strong>How to access e-resources?</strong>
+      You can log in to the e-resources portal using your student or staff account. Contact us if you need guidance.
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 My Lib RefChat. All Rights Reserved.
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.ms, .en').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'block');
+      document.getElementById('subtitle').textContent = lang === 'ms' ? 'Rujukan Pintar Perpustakaan Anda' : 'Your Smart Library Reference';
+    }
+    setLanguage('ms');
+  </script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/681773628136bc190f4378dd/1iqdus4g2';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+</body>
+</html>
